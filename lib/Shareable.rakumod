@@ -24,8 +24,13 @@ method save {
     self.to-file($storefile);
 }
 
+#| save current state
+method store {
+    self.to-file($storefile);
+}
+
 #| create new from current state
-method new-from {
+method from-store {
     from-file $storefile
 }
 

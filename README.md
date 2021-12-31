@@ -10,6 +10,15 @@ SYNOPSIS
 
 ```raku
 use Shareable;
+class Foo is Shareable {
+    has $.ID;
+}
+my $o = Foo.new: :ID(1);
+say $o.ID;
+$o.store;
+
+my $b = Foo.from-store;
+say $b.ID;
 ```
 
 DESCRIPTION
