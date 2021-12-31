@@ -6,6 +6,7 @@
   "build-depends": [
   ],
   "depends": [
+    "Storable::Lite"
   ],
   "description": "blah blah blah",
   "license": "Artistic-2.0",
@@ -16,7 +17,7 @@
   },
   "resources": [
   ],
-  "source-url": "",
+  "source-url": "https://github.com/tbrowder/Shareable.git",
   "tags": [
   ],
   "test-depends": [
