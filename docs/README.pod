@@ -13,17 +13,24 @@ class Foo is Shareable {
     has $.ID;
 }
 my $o = Foo.new: :ID(1);
-say $o.ID;
-$o.store;
+say $o.ID; # OUTPUT: «1␤»
+$o.store;  # or, alternatively, '$o.save'
 
 my $b = Foo.from-store;
-say $b.ID;
+say $b.ID; # OUTPUT: «1␤»
 
 =end code
 
 =head1 DESCRIPTION
 
-Shareable is ...
+B<Shareable> is a class designed to be a parent class
+for your own class which needs some shared, persistent
+state. It was designed specifically for use by
+the author's module B<Date::Liturgical::Christian>
+in order to "look back" to the day previous for
+any special days that needed to be held over a
+day. B<WARNING: As such, it is not suitable for sharing state
+between independent processes!>
 
 =head1 AUTHOR
 
