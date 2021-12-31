@@ -1,0 +1,6 @@
+use Test;
+use Shareable;
+
+pass "replace me";
+
+done-testing;
